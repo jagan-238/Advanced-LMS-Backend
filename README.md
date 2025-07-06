@@ -1,7 +1,7 @@
 # Advanced Learning Management System (LMS) - Backend
 
 ## 🧠 Introduction
-A scalable backend for managing users, courses, content, assessments, and analytics — enabling educational institutions to run online learning platforms efficiently.
+A scalable backend system to manage users, courses, assessments, analytics, and engagement for modern online learning platforms. Built to support instructors, students, and administrators with secure authentication, structured content delivery, grading, and data-driven insights.
 
 ## 📦 Project Type
 **Backend**
@@ -12,93 +12,81 @@ A scalable backend for managing users, courses, content, assessments, and analyt
 
 ## 📁 Folder Structure
 lms-backend/
-├── config/ # DB config
-├── controllers/ # Logic handlers
-├── middlewares/ # Auth, error, etc.
+├── config/ # DB connection
+├── controllers/ # Route logic
+├── middlewares/ # Auth, error handlers
 ├── models/ # Mongoose schemas
 ├── routes/ # API routes
 ├── utils/ # Helpers
+├── tests/ # Unit/integration tests
 ├── app.js
 ├── server.js
 └── .env
 
-yaml
-Copy
-Edit
-
-## 🎥 Walkthroughs
-- **App Demo:** [Add link]
-- **Codebase Tour:** [Add link]
-
----
-
-## ✨ Key Features
-
-- 🔐 **Auth & Roles**: JWT auth, RBAC (Student, Instructor, Admin), secure user profiles
-- 📚 **Course Management**: CRUD on courses/lessons, uploads, approval, versioning
-- 📝 **Assessments**: Quizzes/assignments, auto-save, grading, plagiarism check
-- 📊 **Analytics**: Dashboards, performance tracking, predictive alerts, reports
-- 💬 **Engagement**: Discussion forums, peer reviews, gamified badges/leaderboards
-- 🧪 **API & Docs**: Tested with Postman, Swagger/OpenAPI documentation
+## ✨ Features
+- **Authentication**: JWT-based login, secure password hashing, RBAC (Student, Instructor, Admin)
+- **Course Management**: CRUD for courses, syllabus, file uploads, versioning
+- **Assessments**: Quizzes, assignments, auto-save, grading, plagiarism checks
+- **Analytics**: Real-time dashboards, progress tracking, predictive risk alerts
+- **Engagement**: Forums, peer reviews, gamified achievements
+- **Testing & Docs**: Postman collection, Swagger docs, automated tests
 
 ---
 
 ## ⚙️ Setup & Installation
 
 ### Prerequisites
-- Node.js ≥ 18.x, MongoDB (local/Atlas), Postman
+- Node.js ≥ 18.x
+- MongoDB (local or Atlas)
+- Postman (for API testing)
 
 ### Installation
 ```bash
 git clone https://github.com/yourusername/advanced-lms-backend.git
 cd advanced-lms-backend
 npm install
-cp .env.example .env
-# fill in Mongo URI + JWT_SECRET
+cp .env.example .env   # Then fill in Mongo URI and JWT_SECRET
 npm run dev
-Sample .env
-ini
-Copy
-Edit
+
+.env
 PORT=8000
 MONGO_URL=mongodb+srv://<user>:<pass>@cluster.mongodb.net/lmsDB
 JWT_SECRET=your_jwt_secret
-🧪 Testing
-bash
-Copy
-Edit
-npm test        # Run tests
-npm run coverage  # View coverage report
+
 🔐 Test Credentials
-txt
-Copy
-Edit
-Student:    student@example.com     | Student@123
-Instructor: instructor@example.com  | Instructor@123
-Admin:      admin@example.com       | Admin@123
+
+👩‍🎓 Student
+Email: student@example.com
+Password: Student@123
+
+👨‍🏫 Instructor
+Email: instructor@example.com
+Password: Instructor@123
+
+🛠 Admin
+Email: admin@example.com
+Password: Admin@123
 📌 API Overview
 Method	Endpoint	Description	Auth
-POST	/api/auth/register	Register user	❌
-POST	/api/auth/login	Login & receive JWT	❌
-GET	/api/courses	Fetch all courses	✅
+POST	/api/auth/register	Register a new user	❌
+POST	/api/auth/login	Login & receive token	❌
+GET	/api/courses	Get all courses	✅
 POST	/api/courses	Create course (Instructor/Admin)	✅
-PUT	/api/courses/:id	Update a course	✅
-DELETE	/api/courses/:id	Delete a course	✅
+PUT	/api/courses/:id	Update course	✅
+DELETE	/api/courses/:id	Delete course	✅
 POST	/api/assignments	Create assignment	✅
-GET	/api/analytics/engagement	Engagement analytics (Instructor)	✅
+GET	/api/analytics/engagement	Get course engagement analytics	✅
 
-📚 Full API Docs: https://lms-backend.example.com/docs
+📘 Full API Docs: https://lms-backend.example.com/docs
 
 🛠 Tech Stack
-Node.js + Express – Backend framework
-
-MongoDB + Mongoose – Database & modeling
-
-JWT + Bcrypt – Auth & password hashing
-
-Swagger UI – API docs
-
-Postman – Testing
-
-Jest – Unit & integration tests
-
+Tech	Description
+Node.js	Server runtime environment
+Express.js	Backend framework
+MongoDB	NoSQL database
+Mongoose	MongoDB object modeling
+JWT	Authentication token system
+Bcrypt	Password hashing
+Swagger UI	Interactive API documentation
+Postman	API testing & collections
+Jest	Unit & integration testing

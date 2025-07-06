@@ -7,8 +7,8 @@ A scalable backend system to manage users, courses, assessments, analytics, and 
 **Backend**
 
 ## 🚀 Deployed Links
-- **Backend:** https://lms-backend.example.com
-- **Database:** https://cloud.mongodb.com
+- **Backend:** https://advanced-lms-backend.onrender.com/
+- **Database:** https://cloud.mongodb.com/v2/6864b3dd227459507ab4d274#/metrics/replicaSet/6865087cb3c53d6d743880f9/explorer/lms
 
 ## 📁 Folder Structure
 lms-backend/
@@ -77,7 +77,7 @@ DELETE	/api/courses/:id	Delete course	✅
 POST	/api/assignments	Create assignment	✅
 GET	/api/analytics/engagement	Get course engagement analytics	✅
 
-📘 Full API Docs: https://lms-backend.example.com/docs
+📘 Full API Docs: https://cloud.mongodb.com/v2/6864b3dd227459507ab4d274#/metrics/replicaSet/6865087cb3c53d6d743880f9/explorer/lms
 
 🛠 Tech Stack
 Tech	Description
